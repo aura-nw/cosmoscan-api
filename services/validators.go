@@ -3,6 +3,9 @@ package services
 import (
 	"encoding/hex"
 	"fmt"
+	"sort"
+	"time"
+
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
@@ -11,8 +14,6 @@ import (
 	"github.com/everstake/cosmoscan-api/services/node"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"sort"
-	"time"
 )
 
 const validatorsMapCacheKey = "validators_map"
@@ -136,7 +137,9 @@ func (s *ServiceFacade) makeValidators() (validators []smodels.Validator, err er
 			return nil, fmt.Errorf("dao.GetProposedBlocksTotal: %s", err.Error())
 		}
 
-		addressBytes, err := types.GetFromBech32(v.OperatorAddress, types.Bech32PrefixValAddr)
+		// TODO: change to aura sdk
+		// addressBytes, err := types.GetFromBech32(v.OperatorAddress, types.Bech32PrefixValAddr)
+		addressBytes, err := types.GetFromBech32(v.OperatorAddress, "auravaloper")
 		if err != nil {
 			return nil, fmt.Errorf("types.GetFromBech32: %s", err.Error())
 		}
@@ -341,7 +344,9 @@ func (s *ServiceFacade) GetValidatorBalance(valAddress string) (balance smodels.
 	}
 	balance.SelfDelegated = validator.SelfStake
 	balance.OtherDelegated = validator.Power.Sub(validator.SelfStake)
-	addressBytes, err := types.GetFromBech32(valAddress, types.Bech32PrefixValAddr)
+	// TODO: change to aura sdk
+	// addressBytes, err := types.GetFromBech32(valAddress, types.Bech32PrefixValAddr)
+	addressBytes, err := types.GetFromBech32(valAddress, "auravaloper")
 	if err != nil {
 		return balance, fmt.Errorf("types.GetFromBech32: %s", err.Error())
 	}
