@@ -1,11 +1,12 @@
 package api
 
 import (
+	"net/http"
+	"strconv"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/gorilla/mux"
-	"net/http"
-	"strconv"
 )
 
 func (api *API) GetAggBlocksCount(w http.ResponseWriter, r *http.Request) {

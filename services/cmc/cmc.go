@@ -3,10 +3,11 @@ package cmc
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/everstake/cosmoscan-api/config"
-	"github.com/shopspring/decimal"
 	"io/ioutil"
 	"net/http"
+
+	"github.com/everstake/cosmoscan-api/config"
+	"github.com/shopspring/decimal"
 )
 
 const apiURL = "https://pro-api.coinmarketcap.com"

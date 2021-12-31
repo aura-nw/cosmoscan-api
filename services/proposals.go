@@ -3,6 +3,9 @@ package services
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
+	"time"
+
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
@@ -10,8 +13,6 @@ import (
 	"github.com/everstake/cosmoscan-api/services/node"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"strings"
-	"time"
 )
 
 func (s *ServiceFacade) GetProposals(filter filters.Proposals) (proposals []dmodels.Proposal, err error) {

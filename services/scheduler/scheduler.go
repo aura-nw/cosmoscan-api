@@ -2,12 +2,13 @@ package scheduler
 
 import (
 	"context"
-	"github.com/everstake/cosmoscan-api/log"
 	"reflect"
 	"runtime"
 	"strings"
 	"sync"
 	"time"
+
+	"github.com/everstake/cosmoscan-api/log"
 )
 
 const (

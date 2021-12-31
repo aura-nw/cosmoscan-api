@@ -3,6 +3,8 @@ package clickhouse
 import (
 	"database/sql"
 	"fmt"
+	"strings"
+
 	"github.com/Masterminds/squirrel"
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/golang-migrate/migrate/v4"
@@ -10,8 +12,8 @@ import (
 	_ "github.com/golang-migrate/migrate/v4/source/file"
 	"github.com/jmoiron/sqlx"
 	_ "github.com/mailru/go-clickhouse"
-	"strings"
 )
+
 const migrationsPath = "./dao/clickhouse/migrations"
 
 type DB struct {

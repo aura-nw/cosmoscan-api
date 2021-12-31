@@ -7,7 +7,7 @@ import (
 	"net/http"
 	"time"
 
-	"github.com/aura-nw/cosmoscan-api/config"
+	"github.com/everstake/cosmoscan-api/config"
 	"github.com/shopspring/decimal"
 )
 

@@ -4,15 +4,16 @@ import (
 	"crypto/sha1"
 	"encoding/hex"
 	"fmt"
+	"math"
+	"sort"
+	"time"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/everstake/cosmoscan-api/services/node"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"math"
-	"sort"
-	"time"
 )
 
 func (s *ServiceFacade) GetNetworkStates(filter filters.Stats) (map[string][]decimal.Decimal, error) {
@@ -73,8 +74,7 @@ func (s *ServiceFacade) MakeStats() {
 		{
 			title: dmodels.StatsTotalDelegators,
 			fetch: func() (value decimal.Decimal, err error) {
-				total, err := s.dao.GetDelegatorsTotal(filters.Delegators{
-				})
+				total, err := s.dao.GetDelegatorsTotal(filters.Delegators{})
 				if err != nil {
 					return value, fmt.Errorf("dao.GetDelegatorsTotal: %s", err.Error())
 				}

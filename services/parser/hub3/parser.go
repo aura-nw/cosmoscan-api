@@ -8,6 +8,12 @@ import (
 	"encoding/json"
 	"errors"
 	"fmt"
+	"sort"
+	"strconv"
+	"strings"
+	"sync"
+	"time"
+
 	"github.com/cosmos/cosmos-sdk/types"
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/everstake/cosmoscan-api/dao"
@@ -19,11 +25,6 @@ import (
 	"github.com/shopspring/decimal"
 	"github.com/tendermint/tendermint/crypto"
 	"github.com/tendermint/tendermint/libs/bytes"
-	"sort"
-	"strconv"
-	"strings"
-	"sync"
-	"time"
 )
 
 const repeatDelay = time.Second * 5

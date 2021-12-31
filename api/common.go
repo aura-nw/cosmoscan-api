@@ -1,13 +1,14 @@
 package api
 
 import (
+	"net/http"
+	"reflect"
+	"runtime"
+
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/everstake/cosmoscan-api/smodels"
-	"net/http"
-	"reflect"
-	"runtime"
 )
 
 func (api *API) Index(w http.ResponseWriter, r *http.Request) {

@@ -2,6 +2,7 @@ package services
 
 import (
 	"fmt"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/smodels"
 )
@@ -13,4 +14,3 @@ func (s *ServiceFacade) GetAggTransfersVolume(filter filters.Agg) (items []smode
 	}
 	return items, nil
 }
-

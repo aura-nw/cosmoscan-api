@@ -3,11 +3,12 @@ package services
 import (
 	"context"
 	"fmt"
+	"time"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/everstake/cosmoscan-api/smodels"
-	"time"
 )
 
 func (s *ServiceFacade) MakeUpdateBalances() {

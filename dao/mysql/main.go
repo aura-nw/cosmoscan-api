@@ -3,6 +3,10 @@ package mysql
 import (
 	"errors"
 	"fmt"
+	"os"
+	"path/filepath"
+	"time"
+
 	"github.com/Masterminds/squirrel"
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/everstake/cosmoscan-api/dao/derrors"
@@ -11,9 +15,6 @@ import (
 	_ "github.com/go-sql-driver/mysql"
 	"github.com/jmoiron/sqlx"
 	migrate "github.com/rubenv/sql-migrate"
-	"os"
-	"path/filepath"
-	"time"
 )
 
 const migrationsDir = "./dao/mysql/migrations"

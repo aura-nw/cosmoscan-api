@@ -3,13 +3,14 @@ package services
 import (
 	"encoding/json"
 	"fmt"
+	"strings"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/everstake/cosmoscan-api/services/node"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"strings"
 )
 
 func (s *ServiceFacade) GetAggTransactionsFee(filter filters.Agg) (items []smodels.AggItem, err error) {

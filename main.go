@@ -1,6 +1,10 @@
 package main
 
 import (
+	"os"
+	"os/signal"
+	"time"
+
 	"github.com/everstake/cosmoscan-api/api"
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/everstake/cosmoscan-api/dao"
@@ -9,9 +13,6 @@ import (
 	"github.com/everstake/cosmoscan-api/services/modules"
 	"github.com/everstake/cosmoscan-api/services/parser/hub3"
 	"github.com/everstake/cosmoscan-api/services/scheduler"
-	"os"
-	"os/signal"
-	"time"
 )
 
 func main() {

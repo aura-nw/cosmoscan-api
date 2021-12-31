@@ -3,10 +3,11 @@ package services
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/shopspring/decimal"
 	"io/ioutil"
 	"net/http"
 	"time"
+
+	"github.com/shopspring/decimal"
 )
 
 type nodeSize struct {

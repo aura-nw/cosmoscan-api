@@ -2,12 +2,13 @@ package services
 
 import (
 	"fmt"
+	"strings"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/everstake/cosmoscan-api/services/helpers"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"strings"
 )
 
 const topProposedBlocksValidatorsKey = "topProposedBlocksValidatorsKey"

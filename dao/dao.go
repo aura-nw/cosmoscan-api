@@ -2,6 +2,8 @@ package dao
 
 import (
 	"fmt"
+	"time"
+
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/everstake/cosmoscan-api/dao/cache"
 	"github.com/everstake/cosmoscan-api/dao/clickhouse"
@@ -10,7 +12,6 @@ import (
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"time"
 )
 
 type (

@@ -1,9 +1,10 @@
 package api
 
 import (
+	"net/http"
+
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/gorilla/mux"
-	"net/http"
 )
 
 func (api *API) GetTopProposedBlocksValidators(w http.ResponseWriter, r *http.Request) {

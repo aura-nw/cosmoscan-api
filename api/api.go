@@ -3,6 +3,12 @@ package api
 import (
 	"encoding/json"
 	"fmt"
+	"io/ioutil"
+	"net/http"
+	"reflect"
+	"strconv"
+	"time"
+
 	"github.com/everstake/cosmoscan-api/config"
 	"github.com/everstake/cosmoscan-api/dao"
 	"github.com/everstake/cosmoscan-api/dmodels"
@@ -13,11 +19,6 @@ import (
 	"github.com/rs/cors"
 	"github.com/urfave/negroni"
 	"go.uber.org/zap"
-	"io/ioutil"
-	"net/http"
-	"reflect"
-	"strconv"
-	"time"
 )
 
 type API struct {

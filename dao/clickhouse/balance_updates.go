@@ -2,6 +2,7 @@ package clickhouse
 
 import (
 	"fmt"
+
 	"github.com/Masterminds/squirrel"
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"

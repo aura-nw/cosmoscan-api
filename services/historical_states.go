@@ -2,14 +2,15 @@ package services
 
 import (
 	"fmt"
+	"sort"
+	"time"
+
 	"github.com/everstake/cosmoscan-api/dao/filters"
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/everstake/cosmoscan-api/log"
 	"github.com/everstake/cosmoscan-api/services/node"
 	"github.com/everstake/cosmoscan-api/smodels"
 	"github.com/shopspring/decimal"
-	"sort"
-	"time"
 )
 
 func (s ServiceFacade) KeepHistoricalState() {
@@ -45,9 +46,8 @@ func (s ServiceFacade) KeepHistoricalState() {
 	}
 }
 
-
 func (s ServiceFacade) Test() (state dmodels.HistoricalState, err error) {
-	return  s.makeState()
+	return s.makeState()
 }
 
 func (s ServiceFacade) makeState() (state dmodels.HistoricalState, err error) {

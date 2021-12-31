@@ -3,11 +3,12 @@ package hub3
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/everstake/cosmoscan-api/dmodels"
-	"github.com/shopspring/decimal"
 	"io/ioutil"
 	"net/http"
 	"time"
+
+	"github.com/everstake/cosmoscan-api/dmodels"
+	"github.com/shopspring/decimal"
 )
 
 const genesisJson = "https://raw.githubusercontent.com/cosmos/launch/master/genesis.json"

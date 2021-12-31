@@ -2,6 +2,7 @@ package smodels
 
 import (
 	"encoding/json"
+
 	"github.com/everstake/cosmoscan-api/dmodels"
 	"github.com/shopspring/decimal"
 )
