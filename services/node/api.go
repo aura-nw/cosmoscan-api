@@ -3,11 +3,12 @@ package node
 import (
 	"encoding/json"
 	"fmt"
-	"github.com/everstake/cosmoscan-api/config"
-	"github.com/shopspring/decimal"
 	"io/ioutil"
 	"net/http"
 	"time"
+
+	"github.com/aura-nw/cosmoscan-api/config"
+	"github.com/shopspring/decimal"
 )
 
 const (
@@ -19,7 +20,7 @@ const (
 	RejectedProposalStatus      = "PROPOSAL_STATUS_REJECTED"
 	FailedProposalStatus        = "PROPOSAL_STATUS_FAILED"
 
-	MainUnit = "uatom"
+	MainUnit = "uaura"
 )
 
 var PrecisionDiv = decimal.New(1, precision)
