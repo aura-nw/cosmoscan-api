@@ -19,7 +19,6 @@ require (
 	github.com/mailru/go-clickhouse v1.3.0
 	github.com/onsi/gomega v1.16.0 // indirect
 	github.com/patrickmn/go-cache v2.1.0+incompatible
-	github.com/rogpeppe/go-internal v1.6.2 // indirect
 	github.com/rs/cors v1.8.0
 	github.com/rs/zerolog v1.26.0 // indirect
 	github.com/rubenv/sql-migrate v0.0.0-20200429072036-ae26b214fa43
@@ -29,8 +28,5 @@ require (
 	github.com/tendermint/tendermint v0.34.14
 	github.com/urfave/negroni v1.0.0
 	go.uber.org/zap v1.19.1
-	golang.org/x/crypto v0.0.0-20210921155107-089bfa567519 // indirect
-	golang.org/x/mod v0.5.0 // indirect
-	golang.org/x/sys v0.0.0-20211013075003-97ac67df715c // indirect
-	google.golang.org/grpc v1.41.0 // indirect
+	google.golang.org/grpc v1.56.3 // indirect
 )
